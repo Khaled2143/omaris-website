@@ -3,18 +3,25 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "row" }}>
-      <div style={{ flex: 1, alignSelf: "stretch", overflow: "hidden" }}>
+    <div
+      className="hero-container"
+      style={{ display: "flex", flexDirection: "row" }}
+    >
+      <div
+        className="hero-image-wrapper"
+        style={{ flex: 1, alignSelf: "stretch", overflow: "hidden" }}
+      >
         <img
           src={Omari_Home}
           style={{
             width: "100%",
-            height: "100%",
+            height: "90%",
             objectFit: "cover",
           }}
         />
       </div>
       <div
+        className="hero-text"
         style={{
           display: "flex",
           flex: 1,
