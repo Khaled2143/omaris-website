@@ -8,7 +8,7 @@ const Footer = () => {
       <p className="footer-logo">Omari Brown</p>
 
       <a
-        href="https://instagram.com/YOUR_HANDLE"
+        href="https://www.instagram.com/changuhhh"
         target="_blank"
         rel="noopener noreferrer"
         className="footer-link"

@@ -17,7 +17,7 @@ const Hero = () => {
       <div
         style={{
           display: "flex",
-          flex: 0.6,
+          flex: 1,
           flexDirection: "column",
           justifyContent: "flex-start",
           alignContent: "center",
@@ -30,8 +30,8 @@ const Hero = () => {
             fontSize: "11px",
             letterSpacing: ".32em",
             textTransform: "uppercase",
-            color: "#5a87f8",
-            marginBottom: "26px",
+            color: "#4f80ff",
+            marginBottom: "clamp(16px, 3vh, 26px)",
           }}
         >
           Brooklyn · Producer / Artist
@@ -40,7 +40,7 @@ const Hero = () => {
           style={{
             fontFamily: "Anton, sans-serif",
             fontWeight: 400,
-            fontSize: "clamp(56px, 7vw, 100px)",
+            fontSize: "clamp(56px, 9vw, 128px)",
             lineHeight: 0.84,
             letterSpacing: "-0.02em",
             color: "#f2f2f4",
@@ -54,11 +54,11 @@ const Hero = () => {
         <p
           style={{
             fontFamily: "Anton, sans-serif",
-            fontSize: "clamp(28px, 2vw, 48px)",
+            fontSize: "clamp(22px, 3.4vw, 42px)",
             lineHeight: 1,
             letterSpacing: "-0.01em",
             color: "#e8e8ea",
-            margin: "18px 0 0",
+            margin: "clamp(12px, 2vh, 18px) 0 0",
           }}
         >
           a.k.a. <span style={{ color: "#4f80ff" }}>Changa</span>
@@ -67,14 +67,13 @@ const Hero = () => {
           style={{
             height: "3px",
             width: "54px",
-            margin: "38px 0 20px 0",
+            margin: "clamp(26px, 4vh, 38px) 0",
             backgroundColor: "#4f80ff",
-            borderRadius: "100",
           }}
         />
         <p
           style={{
-            fontSize: "clamp(15px, 1.2vw, 17px)",
+            fontSize: "clamp(15px, 1.5vw, 18px)",
             lineHeight: 1.7,
             color: "#b0b0b8",
             maxWidth: "46ch",
@@ -83,9 +82,20 @@ const Hero = () => {
         >
           I've been writing for a while now, putting in the work because I
           genuinely believe in what I'm building. Every track is a piece of me,
-          and I don't half-step any of it. I want to put something positive into
-          the world; vibes that move you, words that mean something, and energy
-          that sticks with you long after the song ends.
+          and I don't half-step any of it.
+        </p>
+        <p
+          style={{
+            fontSize: "clamp(15px, 1.5vw, 18px)",
+            lineHeight: 1.7,
+            color: "#b0b0b8",
+            maxWidth: "46ch",
+            margin: "0 0 clamp(30px, 5vh, 40px)",
+          }}
+        >
+          I want to put something positive into the world; vibes that move you,
+          words that mean something, and energy that sticks with you long after
+          the song ends.
         </p>
         <div
           style={{

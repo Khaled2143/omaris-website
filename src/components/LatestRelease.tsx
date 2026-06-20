@@ -5,6 +5,7 @@ type Release = {
   title: string;
   coverArt: string;
   releaseDate: string;
+  type: string;
   description: string;
   spotifyUrl?: string;
   appleMusicUrl?: string;
@@ -19,85 +20,96 @@ const LatestRelease = ({ release }: Props) => {
     <section
       id="latest"
       style={{
-        display: "flex",
-        padding: "clamp(72px, 9vw, 110px) clamp(24px, 5vw, 72px)",
-        flexDirection: "row",
-        maxWidth: "1280px",
+        padding: "clamp(60px, 12vh, 140px) clamp(20px, 5vw, 56px)",
+        maxWidth: "1400px",
         margin: "0 auto",
       }}
     >
-      <div style={{ flex: 1 }}>
-        <p
+      <div
+        style={{
+          display: "flex",
+          alignItems: "baseline",
+          gap: "16px",
+          marginBottom: "clamp(28px, 5vh, 52px)",
+        }}
+      >
+        <span
+          style={{ fontSize: "12px", letterSpacing: "0.3em", color: "#4f80ff" }}
+        >
+          01
+        </span>
+        <span
           style={{
-            fontSize: "11px",
-            letterSpacing: "0.32em",
+            fontSize: "12px",
+            letterSpacing: "0.3em",
             textTransform: "uppercase",
-            color: "#9a9aa2",
-            marginBottom: "20px",
+            color: "#6a6a72",
           }}
         >
-          <span style={{ color: "#4f80ff" }}>01</span> Latest Release
-        </p>
-        <img src={release.coverArt} className="cover-art" />
+          Latest Release
+        </span>
       </div>
 
       <div
         style={{
-          flex: 1,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          gap: "20px",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: "clamp(28px, 5vw, 64px)",
+          alignItems: "center",
         }}
       >
-        <p
-          style={{
-            fontSize: "12px",
-            letterSpacing: "0.32em",
-            textTransform: "uppercase",
-            color: "#4f80ff",
-            margin: 0,
-          }}
-        >
-          Single · {release.releaseDate}
-        </p>
-        <h1
-          style={{
-            fontFamily: "Anton, sans-serif",
-            fontWeight: 400,
-            fontSize: "clamp(40px, 5vw, 72px)",
-            lineHeight: 0.9,
-            letterSpacing: "-0.02em",
-            color: "#f2f2f4",
-            textTransform: "uppercase",
-            margin: 0,
-          }}
-        >
-          {release.title}
-        </h1>
-        <p
-          style={{
-            fontSize: "clamp(15px, 1.2vw, 17px)",
-            lineHeight: 1.7,
-            color: "#b0b0b8",
-            maxWidth: "46ch",
-            margin: 0,
-          }}
-        >
-          {release.description}
-        </p>
+        <img src={release.coverArt} className="cover-art" />
 
-        <div style={{ display: "flex", gap: "14px", marginTop: "10px" }}>
-          {release.spotifyUrl && (
-            <a href={release.spotifyUrl} className="cta-spotify">
-              Spotify
-            </a>
-          )}
-          {release.appleMusicUrl && (
-            <a href={release.appleMusicUrl} className="cta-apple">
-              Apple Music
-            </a>
-          )}
+        <div>
+          <p
+            style={{
+              fontSize: "13px",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "#4f80ff",
+              marginBottom: "14px",
+            }}
+          >
+            {release.type} · {release.releaseDate}
+          </p>
+          <h2
+            style={{
+              fontFamily: "Anton, sans-serif",
+              fontWeight: 400,
+              fontSize: "clamp(48px, 9vw, 104px)",
+              lineHeight: 0.86,
+              letterSpacing: "-0.01em",
+              margin: "0 0 22px",
+              color: "#f2f2f4",
+              textTransform: "uppercase",
+            }}
+          >
+            {release.title}
+          </h2>
+          <p
+            style={{
+              fontSize: "clamp(15px, 1.6vw, 18px)",
+              lineHeight: 1.6,
+              color: "#a4a4ac",
+              maxWidth: "46ch",
+              margin: "0 0 32px",
+            }}
+          >
+            {release.description}
+          </p>
+
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
+            {release.spotifyUrl && (
+              <a href={release.spotifyUrl} className="cta-spotify">
+                Spotify
+              </a>
+            )}
+            {release.appleMusicUrl && (
+              <a href={release.appleMusicUrl} className="cta-apple">
+                Apple Music
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </section>
