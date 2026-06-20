@@ -35,3 +35,18 @@
   border-color: #4f80ff;
   color: #ffffff;
 }
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column !important;
+  }
+
+  .hero-image-wrapper {
+    width: 100%;
+    height: 60vh;
+  }
+
+  .hero-text {
+    padding: 48px 24px !important;
+  }
+}

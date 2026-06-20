@@ -58,19 +58,28 @@
 
 .release-links {
   display: flex;
-  gap: 14px;
-  margin-top: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .release-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 11px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #9a9aa2;
+  font-weight: 600;
+  color: #e8e8ea;
   text-decoration: none;
-  transition: color 0.25s ease;
+  border: 1px solid #2a2a30;
+  padding: 8px 14px;
+  border-radius: 2px;
+  transition: all 0.25s ease;
 }
 
 .release-link:hover {
+  border-color: #4f80ff;
   color: #4f80ff;
 }
