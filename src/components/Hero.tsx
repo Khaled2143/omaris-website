@@ -3,7 +3,8 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div
+    <section
+      id="home"
       className="hero-container"
       style={{ display: "flex", flexDirection: "row" }}
     >
@@ -121,7 +122,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

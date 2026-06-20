@@ -18,17 +18,19 @@ const Navbar = () => {
         backdropFilter: "blur(6px)",
       }}
     >
-      <p
+      <a
+        href="#home"
         style={{
           fontFamily: "Anton, sans-serif",
           fontSize: "20px",
           letterSpacing: "0.05em",
           color: "#e8e8ea",
           textTransform: "uppercase",
+          textDecoration: "none",
         }}
       >
         Omari Brown
-      </p>
+      </a>
       <div style={{ display: "flex", gap: "34px", alignItems: "center" }}>
         <a className="navbarOne" href="#latest">
           Latest
