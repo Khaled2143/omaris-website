@@ -1,0 +1,62 @@
+.cta-apple,
+.cta-spotify {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 14px 22px;
+  text-decoration: none;
+  color: #e8e8ea;
+  background-color: transparent;
+  border: 1px solid #2a2a30;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.cta-apple:hover {
+  color: #0a0a0b;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+.cta-spotify:hover {
+  color: #ffffff;
+  background-color: #1db954;
+  border-color: #1db954;
+  transform: translateY(-2px);
+}
+
+.cover-art {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  box-shadow:
+    0 30px 60px -20px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(79, 128, 255, 0.3),
+    0 0 80px rgba(79, 128, 255, 0.15);
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 30px 60px -20px rgba(0, 0, 0, 0.65),
+      0 0 0 1px rgba(79, 128, 255, 0.3),
+      0 0 80px rgba(79, 128, 255, 0.15);
+  }
+  70% {
+    box-shadow:
+      0 30px 60px -20px rgba(0, 0, 0, 0.65),
+      0 0 0 1px rgba(79, 128, 255, 0.5),
+      0 0 140px rgba(79, 128, 255, 0.35);
+  }
+}
+
+.cover-art {
+  animation: glow-pulse 4s ease-in-out infinite;
+}

@@ -1,0 +1,19 @@
+.notify-button {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #0a0a0b;
+  background-color: #4f80ff;
+  border: none;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition:
+    background-color 0.25s,
+    transform 0.25s;
+}
+
+.notify-button:hover {
+  background-color: #6e98ff;
+  transform: translateY(-2px);
+}

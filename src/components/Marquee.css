@@ -1,0 +1,33 @@
+.marquee {
+  border-top: 1px solid #1a1a20;
+  border-bottom: 1px solid #1a1a20;
+  background-color: #0a0a0b;
+  overflow: hidden;
+  padding: 22px 0;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.marquee-track span {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(15px, 2vw, 30px);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #353542;
+  -webkit-text-stroke: 1px #2a2a30;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

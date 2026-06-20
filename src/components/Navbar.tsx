@@ -24,15 +24,21 @@ const Navbar = () => {
           fontSize: "20px",
           letterSpacing: "0.05em",
           color: "#e8e8ea",
+          textTransform: "uppercase",
         }}
       >
         Omari Brown
       </p>
       <div style={{ display: "flex", gap: "34px", alignItems: "center" }}>
-        <a className="navbarOne">Latest</a>
-        <a className="navbarOne">Music</a>
-        <a className="navbarOne">About</a>
-        <a className="navBarTwo">Notify Me</a>
+        <a className="navbarOne" href="#latest">
+          Latest
+        </a>
+        <a className="navbarOne" href="#music">
+          Music
+        </a>
+        <a className="navBarTwo" href="#notify">
+          Notify Me
+        </a>
       </div>
     </nav>
   );

@@ -4,14 +4,20 @@ import "./Hero.css";
 const Hero = () => {
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
-      <img
-        src={Omari_Home}
-        style={{ flex: 1, height: "120vh", objectFit: "cover" }}
-      />
+      <div style={{ flex: 1, alignSelf: "stretch", overflow: "hidden" }}>
+        <img
+          src={Omari_Home}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+      </div>
       <div
         style={{
           display: "flex",
-          flex: 1,
+          flex: 0.6,
           flexDirection: "column",
           justifyContent: "flex-start",
           alignContent: "center",
@@ -21,7 +27,7 @@ const Hero = () => {
       >
         <p
           style={{
-            fontSize: "12px",
+            fontSize: "11px",
             letterSpacing: ".32em",
             textTransform: "uppercase",
             color: "#5a87f8",
@@ -34,11 +40,12 @@ const Hero = () => {
           style={{
             fontFamily: "Anton, sans-serif",
             fontWeight: 400,
-            fontSize: "clamp(56px,9vw,128px)",
+            fontSize: "clamp(56px, 7vw, 100px)",
             lineHeight: 0.84,
             letterSpacing: "-0.02em",
             color: "#f2f2f4",
             textTransform: "uppercase",
+            margin: "0",
           }}
         >
           Omari
@@ -47,7 +54,7 @@ const Hero = () => {
         <p
           style={{
             fontFamily: "Anton, sans-serif",
-            fontSize: "42px",
+            fontSize: "clamp(28px, 2vw, 48px)",
             lineHeight: 1,
             letterSpacing: "-0.01em",
             color: "#e8e8ea",
@@ -58,22 +65,23 @@ const Hero = () => {
         </p>
         <div
           style={{
-            height: "1px",
+            height: "3px",
             width: "54px",
             margin: "38px 0 20px 0",
-            backgroundColor: "#ffffff",
+            backgroundColor: "#4f80ff",
+            borderRadius: "100",
           }}
         />
         <p
           style={{
-            fontSize: "18px",
+            fontSize: "clamp(15px, 1.2vw, 17px)",
             lineHeight: 1.7,
             color: "#b0b0b8",
             maxWidth: "46ch",
             margin: "0 0 16px",
           }}
         >
-          I've been writingfor a while now, putting in the work because I
+          I've been writing for a while now, putting in the work because I
           genuinely believe in what I'm building. Every track is a piece of me,
           and I don't half-step any of it. I want to put something positive into
           the world; vibes that move you, words that mean something, and energy

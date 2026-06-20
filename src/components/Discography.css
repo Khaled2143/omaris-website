@@ -1,0 +1,76 @@
+.discography-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.release-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.3s ease;
+}
+
+.release-card:hover {
+  transform: translateY(-6px);
+}
+
+.release-cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  box-shadow:
+    0 20px 40px -15px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(79, 128, 255, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.release-card:hover .release-cover {
+  box-shadow:
+    0 30px 60px -15px rgba(0, 0, 0, 0.75),
+    0 0 0 1px rgba(79, 128, 255, 0.4),
+    0 0 80px rgba(79, 128, 255, 0.2);
+}
+
+.release-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.release-meta {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #4f80ff;
+  margin: 0;
+}
+
+.release-title {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #f2f2f4;
+  margin: 0;
+}
+
+.release-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.release-link {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9a9aa2;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.release-link:hover {
+  color: #4f80ff;
+}
