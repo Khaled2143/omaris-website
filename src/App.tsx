@@ -63,6 +63,7 @@ function App() {
     title: "Fast Life",
     coverArt: fast_life,
     releaseDate: "June 2026",
+    type: "Single",
     description:
       "Fast Life leans into the noise; fast money, fast love, faster days - and asks what's left when you finally slow down.",
     spotifyUrl:
