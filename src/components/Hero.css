@@ -1,0 +1,37 @@
+.cta-primary {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #0a0a0b;
+  background-color: #e8e8ea;
+  padding: 15px 28px;
+  text-decoration: none;
+  transition:
+    transform 0.25s,
+    background-color 0.25s;
+}
+
+.cta-primary:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.cta-ghost {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #e8e8ea;
+  border: 1px solid #2a2a30;
+  padding: 15px 28px;
+  text-decoration: none;
+  transition:
+    border-color 0.25s,
+    color 0.25s;
+}
+
+.cta-ghost:hover {
+  border-color: #4f80ff;
+  color: #ffffff;
+}
