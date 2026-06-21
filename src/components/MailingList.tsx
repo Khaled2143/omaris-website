@@ -3,9 +3,13 @@ import "./MailingList.css";
 
 const MailingList = () => {
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    setStatus("loading");
 
     try {
       const response = await fetch("/api/subscribe", {
@@ -15,13 +19,13 @@ const MailingList = () => {
       });
 
       if (response.ok) {
-        console.log("Subscribed!");
+        setStatus("success");
         setEmail("");
       } else {
-        console.log("Something went wrong");
+        setStatus("error");
       }
     } catch (error) {
-      console.log("Error:", error);
+      setStatus("error");
     }
   };
 
@@ -107,6 +111,18 @@ const MailingList = () => {
           Notify Me
         </button>
       </form>
+
+      {status === "success" && (
+        <p style={{ marginTop: "16px", color: "#4f80ff", fontSize: "14px" }}>
+          You're in. Check your inbox (or your spam folder) for a welcome email.
+        </p>
+      )}
+
+      {status === "error" && (
+        <p style={{ marginTop: "16px", color: "#ff6b6b", fontSize: "14px" }}>
+          Something went wrong. Try again in a moment.
+        </p>
+      )}
     </section>
   );
 };
